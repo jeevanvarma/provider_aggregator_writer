@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-autowire="byName">
+		
+	
+	<import resource="classpath:/data-source-spring-context.xml"/>	
+	<import resource="classpath:/provider-config-spring-context.xml"/>
+	<import resource="classpath:/providers-publisher-spring-context.xml"/>
+	
+	<bean name="providerManager" class="com.blogspot.denizstij.paw.provider.ProviderManager" scope="singleton" >		
+		<property name="providerSet" >
+			<set>				
+				<ref bean="polarisProvider" />
+				<ref bean="orionProvider" />				
+			</set>
+		</property>
+	</bean>
+	
+	<bean name="polarisProvider" class="com.blogspot.denizstij.paw.provider.Provider"  >
+		<property name="publisher">
+				<ref bean="polarisProviderPublisher" />				
+		</property>
+		
+		<property name="providerConfigInfo">
+				<ref bean="polarisProviderConfig" />
+		</property>
+		
+		<property name="marketValueDataSource" >
+			<ref bean="polarisRandomMarketValueDataSource" />
+		</property>	
+	
+	</bean>	
+	
+	<bean name="orionProvider" class="com.blogspot.denizstij.paw.provider.Provider" >
+		<property name="providerConfigInfo">
+				<ref bean="orionProviderConfig" />				
+		</property>
+		
+		<property name="publisher">
+				<ref bean="orionProviderPublisher" />				
+		</property>
+		
+		<property name="marketValueDataSource" >
+			<ref bean="orionRandomMarketValueDataSource" />
+		</property>		
+	</bean>	
+	
+</beans>
