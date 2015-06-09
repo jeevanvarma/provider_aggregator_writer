@@ -1,7 +1,7 @@
 Provider Aggregator Writer
 --------------
 
-This is a java coding exercise to solve a provider, aggregator, file writer problem.
+This is a simulation for market data consumer with providers, aggregator, file writer.
 
 It utilises following frameworks:
 - Spring  3.1.1.RELEASE : Dependency injection
