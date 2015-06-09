@@ -8,9 +8,12 @@ It utilises following frameworks:
 - JeroMQ(ZeroMQ)  0.3.4 : Pub/Sub between Provider  and Aggregator
 - Chronicle Queue 3.3.4 : Messaging between Aggregator and Writer
 - Smile Jackson  2.5.0 : Object Serialization 
-- Appache Commons Pool2 : Object Pooling 
+- Apache Commons Pool2 : Object Pooling 
 - Guava 18.0 : AtomicDouble 
 - SLF and logback 1.1.2 : Logging framework 
 - Java 7 and Maven 2.2
 
-Extensive test covarage is working progress. 
+Please visit my blog for further info:
+
+http://denizstij.blogspot.co.uk/2015/06/mash-up-technologies-for-simple-market.html
+
