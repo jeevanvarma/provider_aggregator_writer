@@ -1,7 +1,7 @@
 Provider Aggregator Writer
 --------------
 
-This is a simulation for market data consumer with providers, aggregator, file writer.
+This is an application for market data consumer with providers, aggregator, file writer.
 
 It utilises following frameworks:
 - Spring  3.1.1.RELEASE : Dependency injection
@@ -14,6 +14,5 @@ It utilises following frameworks:
 - Java 7 and Maven 2.2
 
 Please visit my blog for further info:
-
 http://denizstij.blogspot.co.uk/2015/06/mash-up-technologies-for-simple-market.html
 
