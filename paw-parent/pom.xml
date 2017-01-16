@@ -35,16 +35,15 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.2.0.RELEASE</version>
+			<version>4.3.5.RELEASE</version>
 			<scope>compile</scope>			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>4.2.0.RELEASE</version>
+			<version>4.3.5.RELEASE</version>
 			<scope>compile</scope>		
 		</dependency>
-		
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -83,10 +82,19 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-   
+	<!--repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories-->
 	
 </project>
